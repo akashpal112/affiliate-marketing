@@ -4,7 +4,7 @@ import dbConnect from '@/lib/mongodb';
 import User from '@/models/User';
 import Affiliate from '@/models/Affiliate';
 import { authOptions } from '../auth/[...nextauth]/route';
-
+export const dynamic = 'force-dynamic';
 export async function POST(request: NextRequest) {
   try {
 const session = await getServerSession(authOptions);    if (!session) {
